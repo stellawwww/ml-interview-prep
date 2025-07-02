@@ -1,0 +1,52 @@
+import numpy as np
+
+data = [1, 2, 3, 4, 5]
+value = 4
+
+# Percentile of the value
+percentile = np.sum(np.array(data) <= value) / len(data) * 100
+print(f"The percentile of {value} is {percentile}%")
+
+percentile_5 = np.sum(np.array(data) <= 5) / len(data) * 100
+print(f"The percentile of 5 is {percentile_5}%")
+
+
+## z score
+# given a normal distribution with mean 81 and standard deviation 6.3
+mean = 81
+std_dev = 6.3
+
+
+def z_score(x):
+    print(f"Calculating z score for {x}")
+    print(f"The Z score is {(x - mean) / std_dev}")
+    return (x - mean) / std_dev
+
+
+# value 65
+z_score(65)
+print(f"The z score of 65 is {z}")
+
+# value 83
+z_score(83)
+
+
+##practice problem
+## LSAT: mean = 151, std = 10
+## MCAT mean = 25.1 std = 6.4
+LSAT_mean = 151
+LSAT_std = 10
+
+MCAT_mean = 25.1
+MCAT_std = 6.4
+
+
+def z_score(x, mean, std):
+    print(f"Calculating z score for {x}")
+    print(f"The Z score is {(x - mean) / std}")
+    return (x - mean) / std
+
+
+LSAT_z_score = z_score(172, LSAT_mean, LSAT_std)  # 2.1
+MCAT_z_score = z_score(37, MCAT_mean, MCAT_std)  # 1.8
+# so he did better on LSAT exam
