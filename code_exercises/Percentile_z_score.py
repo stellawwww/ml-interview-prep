@@ -50,3 +50,7 @@ def z_score(x, mean, std):
 LSAT_z_score = z_score(172, LSAT_mean, LSAT_std)  # 2.1
 MCAT_z_score = z_score(37, MCAT_mean, MCAT_std)  # 1.8
 # so he did better on LSAT exam
+
+
+((105 - 32) * 5) / 9  # 40
+10 / 9
